@@ -9,6 +9,9 @@ cd "$(dirname "$0")"
 repo_dir="$(pwd)"
 escaped_repo_dir="${repo_dir//&/\\&}"
 
+echo "Removing any existing virtual environment"
+rm -rf venv
+
 echo "Creating virtual environment"
 python3 -m venv venv
 source venv/bin/activate
